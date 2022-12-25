@@ -1,7 +1,8 @@
 import requests
 import json
 import discord
-import responses    
+import responses   
+import d_token 
 # https://jsoneditoronline.org/  <-- Good tool for JSON
 
 
@@ -18,7 +19,7 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discord_bot():
-    TOKEN = "MTA1NjM3NjI0NTQzMDAxMzk5NA.GSLtgY.UehiBlWxgDWo-7kdHsInwv0F-I5QTibU0fWOzE"
+    TOKEN = d_token.TOKEN
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
